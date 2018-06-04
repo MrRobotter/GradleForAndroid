@@ -33,10 +33,15 @@ Ant 发布于2000年，很快成为Java项目最流行的构建工具。<br/>
   * 使用XML作为脚本配置格式，除非是很小的项目，否则它的XML文件就很快大得无法管理。
 #### Maven
 Maven 发布于2004年，目前是解决使用Ant所带来的一些问题。<br/>
-![image](https://github.com/MrRobotter/GradleForAndroid/raw/develop/images/Maven.png "Maven") <br/>
+![image](https://github.com/MrRobotter/GradleForAndroid/raw/develop/images/Maven.jpeg "Maven") <br/>
 Maven也是使用XML作为构建配置的文件格式，不过文件结构却有了巨大的变化：
 * Ant 需要开发者将执行task所需的全部命令都列出来
 * Maven 依靠约定并提供现成可调用的目标<br/>
 
 不仅如此，Maven更重要的一个进步是具备从网络上自动下载依赖的能力（后来Ant通过lvy也具备了这个功能），这革命性地改变了我们开发软件的方式。<br/>
+Maven的缺点：
+* 依赖管理不能很好地处理相同库文件不同版本之间的冲突（lvyz在这方面更好一些）
+* XML作为配置文件的格式有严格的结构层次和标准，定制化目标很困难<br/>
+Maven 主要解决了依赖管理的问题，然而使用XML的错误使他重蹈覆辙，实际上Maven很难写出复杂、定制化的构建脚本，在大型项目中，他经常什么“特别的事儿”还没干就有几百行代码，甚至不如Ant。<br/>
+
 
