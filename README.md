@@ -2,7 +2,8 @@
   读完本文我可以了解到：
 * [Android应用的构建过程](#Android应用的构建过程)
 * [注意点](#注意点)
-
+* [Android早期的构建工具：Ant，Maven](#Android早期的构建工具：Ant，Maven)
+* [Android构建神器：Gradle](#Android构建神器：Gradle)
 ****
 ### Android应用的构建过程
 Android应用的构建过程十分复杂，如图所示：<br/>
@@ -42,6 +43,29 @@ Maven也是使用XML作为构建配置的文件格式，不过文件结构却有
 Maven的缺点：
 * 依赖管理不能很好地处理相同库文件不同版本之间的冲突（lvyz在这方面更好一些）
 * XML作为配置文件的格式有严格的结构层次和标准，定制化目标很困难<br/>
+
 Maven 主要解决了依赖管理的问题，然而使用XML的错误使他重蹈覆辙，实际上Maven很难写出复杂、定制化的构建脚本，在大型项目中，他经常什么“特别的事儿”还没干就有几百行代码，甚至不如Ant。<br/>
 
+前辈们在反省前面两种构建工具的错误之后，提出了DSL（Domain Special Language，领域专用语言）的概念，目标是设计一套能够解决特定领域问题的语言。在构建方面，DSL的一个成功案例就是Gradle。
+****
+### Android构建神器：Gradle
+![image](https://github.com/MrRobotter/GradleForAndroid/raw/develop/images/Gradle.gif "Gradle")
+
+2012发布的Gradle深刻吸取前面几位前辈的经验和教训，集大家之所成，做了很多的改进。
+
+Gradle有约定优于配置的原则，即为设置和属性提供默认值，这使得他比Ant或者Maven更容易上手。
+
+Gradle构建脚本不再使用XML，而是使用Groovy的DSL进行书写（Groovy是一种基于Java虚拟机的动态语言，因此Android开发者看着会很熟悉），从而使得构建脚本比用Ant和Maven写的更清晰、简洁，下面是实现同样目标的Maven代码和Gradle代码对比:
+
+![image](https://github.com/MrRobotter/GradleForAndroid/raw/develop/images/代码比较.gif "代码比较")
+
+Gradle 既有Ant的强大和灵活性，又有Maven的依赖管理，支持插件且易于使用。因此一推出就获得广泛关注，2013年被Google选为Android Studio的默认构建工具。
+
+Gradle设计的方式使他可以很容易地扩展构建和插入到现有的构建过程中，Google推广Gradle金额Android Studio时，目标是让代码复用、构建variant、配置和定制构建过程变得更加简单。
+
+有人可能担心是否需要专门去学习新语言Groovy，《Gradle for Android》书中专门提到：
+
+ >Groovy代码非常易读，如果你学习过Java，那么学习Groovy的曲线不会陡峭
+  如果你想构建自己的任务和插件，那么对Groovy有更深次的理解尤为重要
+  不过因为Groovy是基于Java虚拟机的，所以你完全可以用Java或者其他基于Java虚拟机的语言来编写你的自定义插件。
 
