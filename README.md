@@ -32,7 +32,7 @@ Ant 发布于2000年，很快成为Java项目最流行的构建工具。<br/>
 * 不足之处:
   * 使用XML作为脚本配置格式，除非是很小的项目，否则它的XML文件就很快大得无法管理。
 #### Maven
-Maven 发布于2004年，目前是解决使用Ant所带来的一些问题。
+Maven 发布于2004年，目前是解决使用Ant所带来的一些问题。<br/>
 ![image](https://github.com/MrRobotter/GradleForAndroid/raw/develop/images/Maven.png "Maven") <br/>
 Maven也是使用XML作为构建配置的文件格式，不过文件结构却有了巨大的变化：
 * Ant 需要开发者将执行task所需的全部命令都列出来
