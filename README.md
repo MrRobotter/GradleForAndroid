@@ -77,7 +77,7 @@ Gradle设计的方式使他可以很容易地扩展构建和插入到现有的�
  >Groovy代码非常易读，如果你学习过Java，那么学习Groovy的曲线不会陡峭
   如果你想构建自己的任务和插件，那么对Groovy有更深次的理解尤为重要
   不过因为Groovy是基于Java虚拟机的，所以你完全可以用Java或者其他基于Java虚拟机的语言来编写你的自定义插件。
-  
+ **** 
  ### Gradle的关键概念及构建生命周期
   
  #### Gradle的两个关键概念 项目和任务
@@ -131,12 +131,12 @@ gradlew ...
 使用 gradle wrapper以后，gradle wrapper 会为每个项目下载一个gradle压缩包，路径在\User\yourname.gradle\wrapper\dists里：
 
 ![image](https://github.com/MrRobotter/GradleForAndroid/raw/develop/images/gradle压缩包路径.jpeg "gradle压缩包路径")
-
+****
 ### 总结
 Android Studio 占领市场后，构建工具Gradle的地位无人能敌，我们有必要学习、使用它来为我们创造价值。
 
 摘抄这篇文章能初步了解Gradle的发展过程，它有什么优点，为什么会被广泛使用，有助于后续深入学习Gradle。
-
+****
 ### 鸣谢
 [拭心](https://blog.csdn.net/u011240877/article/details/53572264)
 
