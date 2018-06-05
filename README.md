@@ -16,7 +16,7 @@
 ****
 ### Android应用的构建过程
 Android应用的构建过程十分复杂，如图所示：<br/>
-![image](https://github.com/MrRobotter/GradleForAndroid/raw/develop/images/Android应用构建过程示意图.png "Android应用构建过程示意图") <br/>
+![image](https://github.com/MrRobotter/GradleForAndroid/raw/master/images/Android应用构建过程示意图.png "Android应用构建过程示意图") <br/>
 主要有以下几个步骤：
 1. 主要的资源文件（layout，values等）都被 `aapt` 编译，并且在一个R文件中引用
 2. Java代码被Java编译器编译成JVM字节码(.class文件)
@@ -34,7 +34,7 @@ Android应用的构建过程十分复杂，如图所示：<br/>
 在Gradle之前被广泛使用的是`Apache Ant`和 `Maven`。
 #### Ant
 Ant 发布于2000年，很快成为Java项目最流行的构建工具。<br/>
-![image](https://github.com/MrRobotter/GradleForAndroid/raw/develop/images/Ant.png "Ant") <br/>
+![image](https://github.com/MrRobotter/GradleForAndroid/raw/master/images/Ant.png "Ant") <br/>
 * Ant的优点：
   * 简单、易学，不需要什么特殊的准备就能上手
   * 基于过程式编程思想使得构建非常灵活
@@ -43,7 +43,7 @@ Ant 发布于2000年，很快成为Java项目最流行的构建工具。<br/>
   * 使用XML作为脚本配置格式，除非是很小的项目，否则它的XML文件就很快大得无法管理。
 #### Maven
 Maven 发布于2004年，目前是解决使用Ant所带来的一些问题。<br/>
-![image](https://github.com/MrRobotter/GradleForAndroid/raw/develop/images/Maven.jpeg "Maven") <br/>
+![image](https://github.com/MrRobotter/GradleForAndroid/raw/master/images/Maven.jpeg "Maven") <br/>
 Maven也是使用XML作为构建配置的文件格式，不过文件结构却有了巨大的变化：
 * `Ant` 需要开发者将执行task所需的全部命令都列出来
 * `Maven` 依靠约定并提供现成可调用的目标<br/>
@@ -58,7 +58,7 @@ Maven 主要解决了依赖管理的问题，然而使用XML的错误使他重�
 前辈们在反省前面两种构建工具的错误之后，提出了`DSL`（Domain Special Language，领域专用语言）的概念，目标是设计一套能够解决特定领域问题的语言。在构建方面，DSL的一个成功案例就是Gradle。
 ****
 ### Android构建神器 Gradle
-![image](https://github.com/MrRobotter/GradleForAndroid/raw/develop/images/Gradle.gif "Gradle")
+![image](https://github.com/MrRobotter/GradleForAndroid/raw/master/images/Gradle.gif "Gradle")
 
 2012发布的Gradle深刻吸取前面几位前辈的经验和教训，集大家之所成，做了很多的改进。
 
@@ -66,7 +66,7 @@ Gradle有约定优于配置的原则，即为设置和属性提供默认值，�
 
 Gradle构建脚本不再使用XML，而是使用Groovy的DSL进行书写（Groovy是一种基于Java虚拟机的动态语言，因此Android开发者看着会很熟悉），从而使得构建脚本比用Ant和Maven写的更清晰、简洁，下面是实现同样目标的Maven代码和Gradle代码对比:
 
-![image](https://github.com/MrRobotter/GradleForAndroid/raw/develop/images/代码比较.gif "代码比较")
+![image](https://github.com/MrRobotter/GradleForAndroid/raw/master/images/代码比较.gif "代码比较")
 
 Gradle 既有Ant的强大和灵活性，又有Maven的依赖管理，支持插件且易于使用。因此一推出就获得广泛关注，2013年被Google选为Android Studio的默认构建工具。
 
@@ -84,11 +84,11 @@ Gradle设计的方式使他可以很容易地扩展构建和插入到现有的�
  
  `项目`每个build.gradle脚本构建文件代表一个项目`project`
  
-![image](https://github.com/MrRobotter/GradleForAndroid/raw/develop/images/build.gradle文件.jpeg "build.gradle文件")
+![image](https://github.com/MrRobotter/GradleForAndroid/raw/master/images/build.gradle文件.jpeg "build.gradle文件")
 
 `任务`task构建在脚本里：
 
-![image](https://github.com/MrRobotter/GradleForAndroid/raw/develop/images/task.jpeg "task")
+![image](https://github.com/MrRobotter/GradleForAndroid/raw/master/images/task.jpeg "task")
 
 每次构建至少包括一个项目，没干嘛项目里又至少包括一个任务。
 #### Gradle构建生命周期
@@ -120,7 +120,7 @@ gradlew ...
 
 开发者或者自动构建系统可以通过使用`wapper`来运行`gradle`命令，由它来搞定兼容等问题，因此我们甚至都不需要安装gradle，直接使用gradle wapper即可，就像Android Studio里推荐的一样：
 
-![image](https://github.com/MrRobotter/GradleForAndroid/raw/develop/images/mac下的操作.jpeg "mac下的操作")
+![image](https://github.com/MrRobotter/GradleForAndroid/raw/master/images/mac下的操作.jpeg "mac下的操作")
 
 上图所示并没有使用wrapper，是因为当运行gradlew命令时，gradle wrapper 会自动下载所需要但是你没有的gradle版本并使用。
 
@@ -130,7 +130,7 @@ gradlew ...
 
 使用 gradle wrapper以后，gradle wrapper 会为每个项目下载一个gradle压缩包，路径在\User\yourname.gradle\wrapper\dists里：
 
-![image](https://github.com/MrRobotter/GradleForAndroid/raw/develop/images/gradle压缩包路径.jpeg "gradle压缩包路径")
+![image](https://github.com/MrRobotter/GradleForAndroid/raw/master/images/gradle压缩包路径.jpeg "gradle压缩包路径")
 ****
 ### 总结
 Android Studio 占领市场后，构建工具Gradle的地位无人能敌，我们有必要学习、使用它来为我们创造价值。
