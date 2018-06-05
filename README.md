@@ -1,13 +1,14 @@
 # Gradle for Android
   读完本文我可以了解到：
-* [Android应用的构建过程](#应用的构建过程)
+* [Android应用的构建过程](#android应用的构建过程)
   * [注意点](#注意点)
-* [Android早期的构建工具](#早期的构建工具)
+* [Android早期的构建工具](#android早期的构建工具)
   * [Ant](#ant)
   * [Maven](#maven)
-* [Android构建神器：Gradle](#构建神器)
+* [Android构建神器：Gradle](#android构建神器:gradle)
+
 ****
-### 应用的构建过程
+### Android应用的构建过程
 Android应用的构建过程十分复杂，如图所示：<br/>
 ![image](https://github.com/MrRobotter/GradleForAndroid/raw/develop/images/Android应用构建过程示意图.png "Android应用构建过程示意图") <br/>
 主要有以下几个步骤：
@@ -23,7 +24,7 @@ Android应用的构建过程十分复杂，如图所示：<br/>
 2. 如果对apk正式签名，还需要使用zipalign工具对apk进行对齐操作，这样做的好处是当应用运行时会减少内存的开销 <br/>
 通过上面的了解，Android的构建过程十分复杂，如果每一步都要人工手动去完成的话，是费时费力的，效率太低，于是有了各种各样的构建工具。
 ****
-### 早期的构建工具
+### Android早期的构建工具
 在Gradle之前被广泛使用的是`Apache Ant`和 `Maven`。
 #### Ant
 Ant 发布于2000年，很快成为Java项目最流行的构建工具。<br/>
@@ -50,7 +51,7 @@ Maven 主要解决了依赖管理的问题，然而使用XML的错误使他重�
 
 前辈们在反省前面两种构建工具的错误之后，提出了`DSL`（Domain Special Language，领域专用语言）的概念，目标是设计一套能够解决特定领域问题的语言。在构建方面，DSL的一个成功案例就是Gradle。
 ****
-### 构建神器
+### Android构建神器:Gradle
 ![image](https://github.com/MrRobotter/GradleForAndroid/raw/develop/images/Gradle.gif "Gradle")
 
 2012发布的Gradle深刻吸取前面几位前辈的经验和教训，集大家之所成，做了很多的改进。
