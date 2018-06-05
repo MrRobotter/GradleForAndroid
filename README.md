@@ -3,8 +3,8 @@
 * [Android应用的构建过程](#应用的构建过程)
   * [注意点](#注意点)
 * [Android早期的构建工具](#早期的构建工具)
-  * [Ant](#Ant)
-  * [Maven](#Maven)
+  * [Ant](#ant)
+  * [Maven](#maven)
 * [Android构建神器：Gradle](#构建神器)
 ****
 ### 应用的构建过程
