@@ -5,7 +5,13 @@
 * [Android早期的构建工具](#android早期的构建工具)
   * [Ant](#ant)
   * [Maven](#maven)
-* [Android构建神器：Gradle](#android构建神器:gradle)
+* [Android构建神器：Gradle](#android构建神器：gradle)
+* [Gradle的关键概念及构建生命周期](#gradle的关键概念及构建生命周期)
+  * [Gradle的两个关键概念：项目和任务](#gradle的两个关键概念：项目和任务)
+  * [Gradle构建生命周期](#gradle构建生命周期)
+  * [Gradle Wrapper](#gradle-wrapper)
+* [总结](#总结)
+* [鸣谢](#鸣谢)
 
 ****
 ### Android应用的构建过程
@@ -51,7 +57,7 @@ Maven 主要解决了依赖管理的问题，然而使用XML的错误使他重�
 
 前辈们在反省前面两种构建工具的错误之后，提出了`DSL`（Domain Special Language，领域专用语言）的概念，目标是设计一套能够解决特定领域问题的语言。在构建方面，DSL的一个成功案例就是Gradle。
 ****
-### Android构建神器:Gradle
+### Android构建神器：Gradle
 ![image](https://github.com/MrRobotter/GradleForAndroid/raw/develop/images/Gradle.gif "Gradle")
 
 2012发布的Gradle深刻吸取前面几位前辈的经验和教训，集大家之所成，做了很多的改进。
@@ -74,18 +80,18 @@ Gradle设计的方式使他可以很容易地扩展构建和插入到现有的�
   
  ### Gradle的关键概念及构建生命周期
   
- #### Gradle的两个关键概念：`项目`和`任务`
+ #### Gradle的两个关键概念：项目和任务
  
- 每个build.gradle脚本构建文件代表一个项目`project`
+ `项目`每个build.gradle脚本构建文件代表一个项目`project`
  
 ![image](https://github.com/MrRobotter/GradleForAndroid/raw/develop/images/build.gradle文件.jpeg "build.gradle文件")
 
-任务task构建在脚本里：
+`任务`task构建在脚本里：
 
 ![image](https://github.com/MrRobotter/GradleForAndroid/raw/develop/images/task.jpeg "task")
 
 每次构建至少包括一个项目，没干嘛项目里又至少包括一个任务。
-#### 构建生命周期
+#### Gradle构建生命周期
 一个Gradle构建通常包括下面三个阶段：
 * `初始化`  项目实例会在这时被创建，如果这个项目里有多个module，或者依赖多个library，并且他们都有对应的build.gradle文件，就会创建过个项目实例。
 
